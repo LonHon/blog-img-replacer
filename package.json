@@ -1,4 +1,10 @@
 {
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "scripts": {
+    "init": "node init.js",
+    "start": "node main.js"
+  },
   "dependencies": {
     "request": "^2.88.0",
     "smms-cli": "^0.4.0"

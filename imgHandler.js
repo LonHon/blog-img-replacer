@@ -10,7 +10,6 @@ async function imgMover (imgUri) {
     // TODO: 保存数据   便于二次上传
     return null
   }
-  console.log('newImgUri: ', newImgUri)
   return {
     oldUri: imgUri,
     newUri: newImgUri
@@ -21,7 +20,7 @@ function downloader (url) {
   return new Promise((resolve, reject) => {
     const arr = url.split('/')
     const fileName = arr[arr.length - 1];
-    const filePath = path.join('./imgs/test1-' + fileName)
+    const filePath = path.join('./imgs/test2-' + fileName)
     request(url, {encoding: 'binary'}, (err, d) => {
       if (err) return console.log('err: 下载图片失败.')
       if (true) {
@@ -42,7 +41,6 @@ async function upload(imgPath) {
   try {
     const res = await smms.upload(imgPath)
     newPath = res.data.url
-    console.log('success: 上传成功,', newPath)
   } catch (err) {
     console.log('err: 上传失败,', err)
   }

@@ -87,7 +87,7 @@ function replacer (fname, content, task) {
 }
 
 function fileWriter (fname, value) {
-  fs.writeFileSync(path.join('./newPost/' + fname), value)
+  fs.writeFileSync(path.join('../result/' + fname), value)
   console.log('写入文件成功: ', fname)
 }
 

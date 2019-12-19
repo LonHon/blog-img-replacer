@@ -1,8 +1,8 @@
 const path = require('path')
-const scaner = require('./scaner')
+const scaner = require('./func/scaner')
 
 // const folderPath = '/Users/lonhon/Documents/lonhon.top/source/_posts/'
-const folderPath = './md/'
+const folderPath = './source/'
 const targetFolder = path.join(folderPath)
 
 scaner(targetFolder)

@@ -20,7 +20,7 @@ function downloader (url) {
   return new Promise((resolve, reject) => {
     const arr = url.split('/')
     const fileName = arr[arr.length - 1];
-    const filePath = path.join('../imgs/' + fileName)
+    const filePath = path.resolve(__dirname, '../imgs/20191220' + fileName)
     request(url, {encoding: 'binary'}, (err, d) => {
       if (err) return console.log('err: 下载图片失败.')
       if (true) {
